@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html unselectable="on">
+
+<head>
+	<title>Домашнее тестовое задание</title>
+	<link rel="stylesheet" href="css/beautiful.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/code.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+    <div class="hide" id="edit_category">
+        <h3>Редактирование категории</h3>
+        <fieldset>
+            <legend>Изменение названия категории</legend>
+            <label>Название <input type="text" autofocus value=""></label>
+            <button id="change_category_name">Изменить Название 💾</button>
+        </fieldset>
+        <fieldset>
+            <legend>Добавление подкатегории</legend>
+            <label>Название подкатегории <input id="subcategory_name" type="text" value=""></label>
+            <button id="new_category">Добавить подкатегорию ➕</button>
+        </fieldset>
+        <fieldset>
+            <legend>Добавление продовольственного продукта</legend>
+            <label>Название <input id="name_food_product" type="text"></label>
+            <label>Цена <input id="price_food_product" type="text"></label>
+            <button id="new_food_product">Добавить продукт ➕</button>
+        </fieldset>
+        <fieldset>
+            <legend>Добавление не продовольственного продукта</legend>
+            <label>Название <input id="name_not_food_product" type="text"></label>
+            <label>Цена <input id="price_not_food_product" type="text"></label>
+            <label>Ссылка <input id="url_not_food_product" type="text"></label>
+            <label>Цвет <select id="color_not_food_product" name="color">
+                <option value="1">Зеленый</option>
+                <option value="2">Красный</option>
+                <option value="3">Желтый</option>
+                <option value="4">Синий</option>
+                <option value="5">Коричневый</option>
+            </select></label>
+            <button id="new_not_food_product">Добавить продукт ➕</button>
+        </fieldset>
+        <fieldset>
+            <legend>Другие функции</legend>
+            <button id="change_category_root">Переместить в другую категорию ✏️</button>
+            <button id="remove_category">Удалить категорию и все что в ней содержится ❌</button>
+        </fieldset>
+        <button id="back_to_tree">Назад</button>
+    </div>
+    <div class="hide" id="edit_food_product_edit">
+        <h3>Редактирование продовольственного продукта</h3>
+        <fieldset>
+            <legend>Изменить данные</legend>
+            <label>Название <input id="name_food_product_edit" type="text"></label>
+            <label>Цена <input id="price_food_product_edit" type="text"></label>
+            <button id="new_food_product_edit">Сохранить 💾</button>
+        </fieldset>
+        <fieldset>
+            <legend>Другие функции</legend>
+            <button id="food_change_category_root">Переместить в другую категорию ✏️</button>
+            <button id="food_remove">Удалить продукт ❌</button>
+        </fieldset>
+        <button id="food_back_to_tree">Назад</button>
+    </div>
+    <div class="hide" id="edit_not_food_product_edit">
+        <h3>Редактирование не продовольственного продукта</h3>
+        <fieldset>
+            <legend>Изменить данные</legend>
+            <label>Название <input id="name_not_food_product_edit" type="text"></label>
+            <label>Цена <input id="price_not_food_product_edit" type="text"></label>
+            <label>Ссылка <input id="url_not_food_product_edit" type="text"></label>
+            <label>Цвет <select id="color_not_food_product_edit" name="color">
+                <option value="1">Зеленый</option>
+                <option value="2">Красный</option>
+                <option value="3">Желтый</option>
+                <option value="4">Синий</option>
+                <option value="5">Коричневый</option>
+            </select></label>
+            <button id="new_not_food_product_edit">Сохранить 💾</button>
+        </fieldset>
+        <fieldset>
+            <legend>Другие функции</legend>
+            <button id="not_food_change_category_root">Переместить в другую категорию ✏️</button>
+            <button id="not_food_remove">Удалить продукт ❌</button>
+        </fieldset>
+        <button id="not_food_back_to_tree">Назад</button>
+    </div>
+
+    <b id="category_choice" class="hide">Выберите категорию в которую хотите преместить:</b>
+
+    <div id="container"></div>
+
+    <div id="category" class="category hide">
+        <div class="block">
+            <div class="info">
+                <p></p>
+                <b title="Нажмите для подсчета стоимости всех продуктов в этой категории" id="calculate_summ_product">💰</b>
+            </div>
+        </div>
+        <div class="category__container">
+        </div>
+    </div>
+
+    <div id="food_product" class="food_product hide">
+        <div class="info">
+            <p>Процессор АМД</p>
+            <p class="money">1000</p>
+            <p>₽</p>
+        </div>
+    </div>
+
+    <div id="not_food_product" class="food_product hide">
+        <div class="info">
+            <p>Обыкновенный</p>
+            <p>Цвет</p>
+            <a target="_blank">URL</a>
+            <p class="money">1000</p>
+            <p>₽</p>
+        </div>
+    </div>
+    
+</body>
+</html>

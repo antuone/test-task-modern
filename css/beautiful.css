@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+body {
+    margin-left: 15px;
+}
+.info, .info p, .functions p {
+    display: inline-block;
+}
+.info p:first-child, .info b {
+    cursor: pointer;
+}
+.add_product {
+    color: darkgreen;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.category__container {
+    padding-left: 50px;
+}
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+.yellow {
+    color: yellow;
+}
+.blue {
+    color: blue;
+}
+.brown {
+    color: brown;
+}
+.green, .red, .yellow, .blue, .brown {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+fieldset {
+    margin-top: 10px;
+}
